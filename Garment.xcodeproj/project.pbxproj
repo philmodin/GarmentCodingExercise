@@ -15,6 +15,9 @@
 		8621797326ACCAD300DB6B4F /* Garment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8621797126ACCAD300DB6B4F /* Garment.xcdatamodeld */; };
 		8621797E26ACCAD300DB6B4F /* GarmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8621797D26ACCAD300DB6B4F /* GarmentTests.swift */; };
 		8621798926ACCAD300DB6B4F /* GarmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8621798826ACCAD300DB6B4F /* GarmentUITests.swift */; };
+		8621799926ACCD4A00DB6B4F /* GarmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8621799826ACCD4A00DB6B4F /* GarmentsView.swift */; };
+		8621799B26ACCD5D00DB6B4F /* GarmentAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8621799A26ACCD5D00DB6B4F /* GarmentAddView.swift */; };
+		86B6308026AD0BBF004E31B5 /* GarmentsSortedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B6307F26AD0BBF004E31B5 /* GarmentsSortedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		8621798426ACCAD300DB6B4F /* GarmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GarmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8621798826ACCAD300DB6B4F /* GarmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentUITests.swift; sourceTree = "<group>"; };
 		8621798A26ACCAD300DB6B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8621799826ACCD4A00DB6B4F /* GarmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentsView.swift; sourceTree = "<group>"; };
+		8621799A26ACCD5D00DB6B4F /* GarmentAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentAddView.swift; sourceTree = "<group>"; };
+		86B6307F26AD0BBF004E31B5 /* GarmentsSortedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentsSortedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,11 +106,10 @@
 			isa = PBXGroup;
 			children = (
 				8621796626ACCAD200DB6B4F /* GarmentApp.swift */,
-				8621796826ACCAD200DB6B4F /* ContentView.swift */,
+				8621799726ACCD2000DB6B4F /* View */,
 				8621796A26ACCAD300DB6B4F /* Assets.xcassets */,
-				8621796F26ACCAD300DB6B4F /* Persistence.swift */,
 				8621797426ACCAD300DB6B4F /* Info.plist */,
-				8621797126ACCAD300DB6B4F /* Garment.xcdatamodeld */,
+				8621799626ACCD1300DB6B4F /* Model */,
 				8621796C26ACCAD300DB6B4F /* Preview Content */,
 			);
 			path = Garment;
@@ -134,6 +139,26 @@
 				8621798A26ACCAD300DB6B4F /* Info.plist */,
 			);
 			path = GarmentUITests;
+			sourceTree = "<group>";
+		};
+		8621799626ACCD1300DB6B4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8621796F26ACCAD300DB6B4F /* Persistence.swift */,
+				8621797126ACCAD300DB6B4F /* Garment.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8621799726ACCD2000DB6B4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8621796826ACCAD200DB6B4F /* ContentView.swift */,
+				8621799826ACCD4A00DB6B4F /* GarmentsView.swift */,
+				86B6307F26AD0BBF004E31B5 /* GarmentsSortedView.swift */,
+				8621799A26ACCD5D00DB6B4F /* GarmentAddView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +293,9 @@
 				8621797026ACCAD300DB6B4F /* Persistence.swift in Sources */,
 				8621796926ACCAD200DB6B4F /* ContentView.swift in Sources */,
 				8621797326ACCAD300DB6B4F /* Garment.xcdatamodeld in Sources */,
+				8621799B26ACCD5D00DB6B4F /* GarmentAddView.swift in Sources */,
+				86B6308026AD0BBF004E31B5 /* GarmentsSortedView.swift in Sources */,
+				8621799926ACCD4A00DB6B4F /* GarmentsView.swift in Sources */,
 				8621796726ACCAD200DB6B4F /* GarmentApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,7 +383,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -410,7 +438,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -435,10 +463,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.phil.training.Garment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phil.training.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -457,10 +485,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.phil.training.Garment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phil.training.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

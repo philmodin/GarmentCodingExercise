@@ -5,22 +5,40 @@
 //  Created by endOfLine on 7/24/21.
 //
 
+import CoreData
 import XCTest
 @testable import Garment
 
 class GarmentTests: XCTestCase {
 
+    let context = PersistenceController.shared.container.viewContext
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Garment")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+
+        do {
+            try PersistenceController.shared.container.persistentStoreCoordinator.execute(deleteRequest, with: context)
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testGarmentAdd() throws {
+        let newGarment = Garment(context: context)
+        newGarment.title = "Test Item"
+        newGarment.timestamp = Date()
+        
+        do {
+            try context.save()
+        } catch {
+            let nsError = error as NSError
+            XCTFail("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
     }
 
     func testPerformanceExample() throws {
